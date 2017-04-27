@@ -1043,11 +1043,13 @@ def xkcd_color_code_list(banned=[], only_=[], exclude_=[]):
 					if name in key:
 						hex_list.append(xkcd_rgb[key])
 			else:
-				for exclude_name in exclude_:
-					for only_name in only_:
+				for only_name in only_:
+					aux = True
+					for exclude_name in exclude_:
 						if exclude_name in key:
-							pass
-						elif only_name in key:
+							aux = False
+					if aux:
+						if only_name in key:
 							hex_list.append(xkcd_rgb[key])
 		
 	return(hex_list)
