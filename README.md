@@ -1,2 +1,2 @@
 # xkcd_color
-Some code to make use the colors from the xkcd color survey
+Some code for easy ploting with the colors from the xkcd color survey
